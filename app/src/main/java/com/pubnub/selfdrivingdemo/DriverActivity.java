@@ -13,7 +13,7 @@ import com.google.android.gms.location.LocationServices;
 import com.pubnub.api.callbacks.PNCallback;
 import com.pubnub.api.models.consumer.PNPublishResult;
 import com.pubnub.api.models.consumer.PNStatus;
-import com.pubnub.kaushik.realtimetaxiandroiddemo.util.Constants;
+import com.pubnub.selfdrivingdemo.util.Constants;
 
 import java.util.LinkedHashMap;
 
@@ -50,6 +50,7 @@ public class DriverActivity extends AppCompatActivity {
 
                     Location location = locationResult.getLastLocation();
                     LinkedHashMap<String, String> message = getNewLocationMessage(location.getLatitude(), location.getLongitude());
+                    android.util.Log.d("Tag", message.toString());
                     MainActivity.pubnub.publish()
                             .message(message)
                             .channel(Constants.PUBNUB_CHANNEL_NAME)

@@ -14,13 +14,18 @@ import android.widget.Button;
 
 import com.pubnub.api.PNConfiguration;
 import com.pubnub.api.PubNub;
-import com.pubnub.kaushik.realtimetaxiandroiddemo.util.Constants;
+import com.pubnub.selfdrivingdemo.util.Constants;
 
 public class MainActivity extends AppCompatActivity {
 
     public static PubNub pubnub; // Pubnub instance
 
     Button driverButton, passengerButton; // Buttons that redirect user to proper view
+    private static final String[] INITIAL_PERMS={
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.READ_CONTACTS
+    };
+    private static final int INITIAL_REQUEST=1337;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +54,12 @@ public class MainActivity extends AppCompatActivity {
 
         if (Build.VERSION.SDK_INT == Build.VERSION_CODES.M) {
             checkPermission();
+            requestPermissions(INITIAL_PERMS, INITIAL_REQUEST);
+
         }
+      //  if (!hasPermission(Manifest.permission.ACCESS_FINE_LOCATION) || !hasPermission(Manifest.permission.READ_CONTACTS)) {
+      //      requestPermissions(INITIAL_PERMS, INITIAL_REQUEST);
+      //  }
 
     }
 

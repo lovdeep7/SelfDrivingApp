@@ -3,8 +3,8 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.pubnub.kaushik.realtimetaxiandroiddemo"
-        minSdkVersion 22
+        applicationId "com.pubnub.selfdrivingdemo"
+        minSdkVersion 23
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -32,6 +32,7 @@ dependencies {
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.2'
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.9.2'
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.2'
+    implementation 'com.github.jd-alexander:library:1.1.0'
 
 
 }
