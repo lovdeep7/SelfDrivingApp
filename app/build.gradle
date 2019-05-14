@@ -4,7 +4,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.pubnub.selfdrivingdemo"
-        minSdkVersion 23
+        minSdkVersion 22
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -33,6 +33,16 @@ dependencies {
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.9.2'
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.2'
     implementation 'com.github.jd-alexander:library:1.1.0'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
 
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:multidex:1.0.3'
+  //  implementation 'com.github.ar-android:DrawRouteMaps:1.0.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'nl.psdcompany:duo-navigation-drawer:2.0.8'
 
 }

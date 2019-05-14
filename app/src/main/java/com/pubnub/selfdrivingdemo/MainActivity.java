@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static PubNub pubnub; // Pubnub instance
 
-    Button driverButton, passengerButton; // Buttons that redirect user to proper view
+    Button driverButton, passengerButton, homeButton; // Buttons that redirect user to proper view
     private static final String[] INITIAL_PERMS={
             Manifest.permission.ACCESS_FINE_LOCATION,
             Manifest.permission.READ_CONTACTS
@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
         driverButton = (Button) findViewById(R.id.driverButton);
         passengerButton = (Button) findViewById(R.id.passengerButton);
+        homeButton = (Button) findViewById(R.id.homeButton);
+
 
         initPubnub();
 
@@ -50,7 +52,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, PassengerActivity.class));
             }
         });
-
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Home.class));
+            }
+        });
 
         if (Build.VERSION.SDK_INT == Build.VERSION_CODES.M) {
             checkPermission();

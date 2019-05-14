@@ -2,4 +2,7 @@
     <string name="app_name">Self Driving Network</string>
     <string name="title_activity_driver">CarActivity</string>
     <string name="title_activity_passenger">PassengerActivity</string>
+
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
 </resources>

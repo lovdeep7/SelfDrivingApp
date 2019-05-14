@@ -182,7 +182,7 @@ public class PassengerActivity extends AppCompatActivity implements OnMapReadyCa
         LatLng myLatLng = new LatLng(myLocation.getLatitude(),
                 myLocation.getLongitude());
         Routing routing = new Routing.Builder()
-                .key("GOOGLEAPIKEY")
+                .key("AIzaSyCcRr4hMXbbL6-ZwM5zRTFldCsvTf9Upnc")
                 .travelMode(AbstractRouting.TravelMode.DRIVING)
                 .withListener(this)
                 .alternativeRoutes(true)

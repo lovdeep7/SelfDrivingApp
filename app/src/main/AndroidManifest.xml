@@ -13,13 +13,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        >
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="GOOGLEAPIKEY" />
+            android:value="AIzaSyCcRr4hMXbbL6-ZwM5zRTFldCsvTf9Upnc" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -30,6 +31,7 @@
         </activity>
         <activity android:name=".DriverActivity" />
         <activity android:name=".PassengerActivity"></activity>
+        <activity android:name=".Home"></activity>
     </application>
 
 </manifest>
